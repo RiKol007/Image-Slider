@@ -6,7 +6,6 @@
 
 body{
     background: #3b3a3a;
-    overflow: hidden;
     
 }
 
@@ -148,15 +147,15 @@ body{
 
 @media only screen and (max-width: 650px){
     .container{
-        position: absolute;
+        
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        height: 80%;
+
+        width: 700px;
+        height: 500px;
         background: #f5f5f5;
         box-shadow: 0 30px 50px #dbdbdb;
         border-radius: 100px;
+        margin-left: 45%;
     }
     
     .slide .item:nth-child(1),
@@ -179,6 +178,26 @@ body{
         transform: translate(0, -50%);
         font-family: system-ui;
         display: none;
+    }
+
+    .slide .item:nth-child(3){
+        left: 5%;
+        margin-top: 500px;
+    }
+    .slide .item:nth-child(4){
+        left: calc(5% + 220px);
+        margin-top: 500px;
+    }
+    .slide .item:nth-child(5){
+        left: calc(5% + 440px);
+        margin-top: 500px;
+    }
+    
+    /* here n = 0, 1, 2, 3,... */
+    .slide .item:nth-child(n + 6){
+        left: calc(5% + 660px);
+        margin-top: 500px;
+        opacity: 0;
     }
     
 
